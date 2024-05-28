@@ -23,7 +23,7 @@ def client(app):
     return app.test_client()
 
 
-def init_test_db(db_path):
+def init_test_db(db_path) -> None:
     connection = sqlite3.connect(db_path)
     connection.executescript(
         """
